@@ -23,7 +23,7 @@ while True:
     if opcao == "d":
         valor = float(input("Informe o valor do depósito: "))
         time.sleep(3)
-        print("Deposito realizado com sucesso !")
+        print("Depósito realizado com sucesso !")
 
         if valor > 0:
             saldo += valor

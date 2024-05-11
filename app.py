@@ -1,3 +1,5 @@
+import time
+
 menu = """
 
 [d] Depositar
@@ -20,6 +22,8 @@ while True:
 
     if opcao == "d":
         valor = float(input("Informe o valor do depósito: "))
+        time.sleep(3)
+        print("Deposito realizado com sucesso !")
 
         if valor > 0:
             saldo += valor
@@ -61,8 +65,12 @@ while True:
             saldo -= valor
             extrato += f"Pagamento: R$ {valor:.2f}\n"
             pagamentos_realizados.append(valor)  # Adicionando o pagamento à lista
+            time.sleep(3)
+            print('Pgamento realizado com suceso !')
         else:
             print("Operação falhou! Valor inválido ou saldo insuficiente.")
+
+        
 
     elif opcao == "q":
         break
